@@ -6,8 +6,18 @@ const Counter = () => {
   return (
     <div>
       <p>{counter}</p>
-      <button onClick={() => setCounter((pre) => pre + 1)}>Increase</button>
-      <button onClick={() => setCounter((pre) => pre - 1)}>Decrease</button>
+      <button
+        onClick={() => setCounter((pre) => pre + 1)}
+        className="btn btn-primary"
+      >
+        Increase
+      </button>
+      <button
+        onClick={() => setCounter((pre) => pre - 1)}
+        className="btn btn-accent"
+      >
+        Decrease
+      </button>
     </div>
   );
 };
