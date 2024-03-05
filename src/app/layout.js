@@ -1,8 +1,13 @@
-import { Inter } from 'next/font/google';
+import { Roboto_Mono } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/shared/Navbar/Navbar';
 
-const inter = Inter({ subsets: ['latin'] });
+const robotoMono = Roboto_Mono({
+  weight: ['400', "500", "700"],
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 export const metadata = {
   title: 'Create Next App',
@@ -12,7 +17,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" data-theme="dark">
-      <body className={inter.className}>
+      <body className={robotoMono.className}>
         <Navbar />
         {children}
       </body>
